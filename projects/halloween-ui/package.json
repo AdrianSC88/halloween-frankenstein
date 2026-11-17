@@ -1,0 +1,15 @@
+{
+  "name": "halloween-ui",
+  "version": "1.0.0",
+  "description": "Librería de componentes visuales de Halloween: tarjeta temática de monstruo para apps Ionic",
+  "author": "Adrián Sánchez Cañadas",
+  "peerDependencies": {
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@ionic/angular": "^9.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

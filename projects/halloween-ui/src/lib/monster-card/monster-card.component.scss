@@ -1,0 +1,49 @@
+/* Estilos propios de la tarjeta. Los var(--x, valor) usan el color del tema
+   si la app lo define, y si no, un valor por defecto (así sirve para otras apps). */
+.tarjeta {
+  background: var(--hui-superficie, #1c202a);
+  /* Borde doble verde: da aspecto de marco de laboratorio */
+  border: 3px double var(--hui-verde, #7fb069);
+  border-radius: 14px;
+  /* Resplandor verde alrededor */
+  box-shadow: 0 0 18px rgba(127, 176, 105, 0.45), 0 6px 14px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  margin: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Efecto al pulsar: la tarjeta se hunde y el resplandor se vuelve rojo sangre */
+.tarjeta:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 22px rgba(139, 26, 26, 0.8);
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;          /* recorta la imagen sin deformarla */
+  display: block;
+  border-bottom: 3px solid var(--hui-rojo, #8b1a1a);
+}
+
+.tarjeta__cuerpo { padding: 14px 16px 18px; }
+
+.tarjeta__titulo {
+  font-family: var(--hui-fuente-titulo, 'Creepster', cursive);
+  color: var(--hui-verde, #7fb069);
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.tarjeta__texto {
+  font-family: var(--hui-fuente-texto, 'Lato', sans-serif);
+  color: #d8dde6;
+  line-height: 1.45;
+}
+
+/* Botón con el amarillo eléctrico del rayo */
+.tarjeta__boton {
+  --background: var(--hui-amarillo, #e8d44d);
+  --color: #0d0f14;
+  font-weight: 700;
+}

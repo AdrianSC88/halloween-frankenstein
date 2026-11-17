@@ -1,0 +1,15 @@
+<!-- Contenedor principal de la tarjeta -->
+<article class="tarjeta">
+  <!-- Solo pintamos la imagen si la página nos ha pasado una -->
+  @if (imagen) {
+    <img class="tarjeta__imagen" [src]="imagen" [alt]="titulo" />
+  }
+  <div class="tarjeta__cuerpo">
+    <h2 class="tarjeta__titulo">{{ titulo }}</h2>
+    <p class="tarjeta__texto">{{ texto }}</p>
+    <!-- Botón de Ionic con el texto configurable -->
+    <ion-button class="tarjeta__boton" (click)="alPulsar()">
+      {{ textoBoton }}
+    </ion-button>
+  </div>
+</article>
