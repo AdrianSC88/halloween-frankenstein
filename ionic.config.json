@@ -1,0 +1,7 @@
+{
+  "name": "halloween-frankenstein",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
