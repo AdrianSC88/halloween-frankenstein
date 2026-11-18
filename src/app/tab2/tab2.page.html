@@ -1,15 +1,19 @@
-<ion-header [translucent]="true">
+<!-- Cabecera de la pestaña -->
+<ion-header>
   <ion-toolbar>
-    <ion-title> Tab 2 </ion-title>
+    <ion-title>Historia</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content>
+  <!-- @for repite la tarjeta una vez por cada ficha de la lista del .ts.
+       Cada tarjeta recibe un contenido distinto mediante @Input(). -->
+  @for (ficha of fichas; track ficha.titulo) {
+    <lib-monster-card
+      [titulo]="ficha.titulo"
+      [texto]="ficha.texto"
+      [textoBoton]="ficha.textoBoton"
+      (botonPulsado)="alPulsar(ficha)"
+    />
+  }
 </ion-content>

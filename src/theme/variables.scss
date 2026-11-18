@@ -1,2 +1,43 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/* Tema global de la app de Frankenstein.
+   Aquí se cargan las fuentes y se definen los colores que usa la tarjeta (--hui-*)
+   y los colores generales de Ionic (--ion-*). */
+
+/* Fuentes de Google Fonts: Creepster (títulos decorativos) y Lato (texto legible).
+   Este @import tiene que ir siempre el primero del archivo. */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lato:wght@400;700&display=swap');
+
+:root {
+  /* ---- Variables de la librería halloween-ui (las lee la tarjeta) ---- */
+  --hui-verde: #7fb069;        /* verde monstruo */
+  --hui-amarillo: #e8d44d;     /* amarillo eléctrico (rayo) */
+  --hui-rojo: #8b1a1a;         /* rojo sangre */
+  --hui-superficie: #1c202a;   /* gris oscuro de las tarjetas */
+  --hui-fuente-titulo: 'Creepster', cursive;
+  --hui-fuente-texto: 'Lato', sans-serif;
+
+  /* ---- Colores generales de Ionic ---- */
+  --ion-background-color: #0d0f14;   /* fondo negro azulado de las pantallas */
+  --ion-text-color: #d8dde6;         /* color del texto */
+  --ion-font-family: 'Lato', sans-serif;
+}
+
+/* Cabecera oscura con el título en fuente decorativa */
+ion-toolbar {
+  --background: #0d0f14;
+  --color: #7fb069;
+  --border-color: #8b1a1a;
+}
+
+ion-title {
+  font-family: 'Creepster', cursive;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Barra de pestañas inferior: fondo oscuro y pestaña activa en verde */
+ion-tab-bar {
+  --background: #0d0f14;
+  --border: 1px solid #8b1a1a;
+  --color: #8a91a0;
+  --color-selected: #7fb069;
+}
