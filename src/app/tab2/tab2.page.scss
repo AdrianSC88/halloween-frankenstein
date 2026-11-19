@@ -1,0 +1,8 @@
+/* Rejilla de la pestaña Historia: 2 columnas, así quedan las 4 tarjetas en 2 filas */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas del mismo ancho */
+  gap: 8px;                              /* separación entre tarjetas */
+  padding: 8px;
+  align-items: start;                    /* cada tarjeta mantiene su propia altura */
+}

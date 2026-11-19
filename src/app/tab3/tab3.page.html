@@ -1,4 +1,3 @@
-<!-- Cabecera de la pestaña -->
 <ion-header>
   <ion-toolbar>
     <ion-title>Galería</ion-title>
@@ -6,14 +5,16 @@
 </ion-header>
 
 <ion-content>
-  <!-- Una tarjeta por cada elemento de la galería, con su imagen, título y frase -->
-  @for (elemento of galeria; track elemento.titulo) {
-    <lib-monster-card
-      [imagen]="elemento.imagen"
-      [titulo]="elemento.titulo"
-      [texto]="elemento.texto"
-      textoBoton="Ver más"
-      (botonPulsado)="alPulsar(elemento)"
-    />
-  }
+  <!-- Fila horizontal: las tarjetas van una al lado de otra (estilos en tab3.page.scss) -->
+  <div class="galeria">
+    @for (elemento of galeria; track elemento.titulo) {
+      <lib-monster-card
+        [imagen]="elemento.imagen"
+        [titulo]="elemento.titulo"
+        [texto]="elemento.texto"
+        textoBoton="Ver más"
+        (botonPulsado)="alPulsar(elemento)"
+      />
+    }
+  </div>
 </ion-content>

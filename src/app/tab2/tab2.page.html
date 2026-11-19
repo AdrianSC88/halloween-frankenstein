@@ -1,4 +1,3 @@
-<!-- Cabecera de la pestaña -->
 <ion-header>
   <ion-toolbar>
     <ion-title>Historia</ion-title>
@@ -6,14 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <!-- @for repite la tarjeta una vez por cada ficha de la lista del .ts.
-       Cada tarjeta recibe un contenido distinto mediante @Input(). -->
-  @for (ficha of fichas; track ficha.titulo) {
-    <lib-monster-card
-      [titulo]="ficha.titulo"
-      [texto]="ficha.texto"
-      [textoBoton]="ficha.textoBoton"
-      (botonPulsado)="alPulsar(ficha)"
-    />
-  }
+  <!-- Contenedor en rejilla: las tarjetas se colocan de 2 en 2 (estilos en tab2.page.scss) -->
+  <div class="rejilla">
+    @for (ficha of fichas; track ficha.titulo) {
+      <lib-monster-card
+        [titulo]="ficha.titulo"
+        [texto]="ficha.texto"
+        [textoBoton]="ficha.textoBoton"
+        (botonPulsado)="alPulsar(ficha)"
+      />
+    }
+  </div>
 </ion-content>

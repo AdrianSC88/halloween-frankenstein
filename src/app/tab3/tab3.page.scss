@@ -1,0 +1,16 @@
+/* Fila de la pestaña Galería: las tarjetas van en horizontal */
+.galeria {
+  display: flex;
+  flex-direction: row;            /* una al lado de otra */
+  gap: 8px;
+  padding: 8px;
+  overflow-x: auto;               /* si no caben, se desplaza de lado con el dedo o el ratón */
+  scroll-snap-type: x mandatory;  /* al desplazar, la tarjeta se queda "enganchada" */
+  align-items: flex-start;
+}
+
+/* Cada tarjeta ocupa como mínimo 280 px y se reparte el espacio sobrante en pantallas grandes */
+.galeria lib-monster-card {
+  flex: 1 0 280px;
+  scroll-snap-align: start;
+}
