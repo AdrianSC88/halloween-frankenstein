@@ -5,8 +5,7 @@
  * mediante @Input(), y avisa de la pulsación del botón mediante @Output().
  */
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-// Importamos el botón de Ionic en su versión standalone
-// En Ionic 9 los componentes standalone se importan desde el paquete principal
+// Botón de Ionic que usa la plantilla de la tarjeta.
 import { IonButton } from '@ionic/angular';
 
 @Component({

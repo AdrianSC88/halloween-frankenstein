@@ -19,7 +19,6 @@ import { MonsterCardComponent } from 'halloween-ui';
 export class Tab1Page {
   // Texto que se muestra dentro de la tarjeta.
   // \n\n = línea en blanco entre párrafos y \n = salto de línea simple.
-  // Cada trozo va entre comillas y se une con +; el punto y coma solo va al final.
   textoInicio =
     '«Fui creado con retales de los muertos, y aun así soy el único que siente.»\n\n' +
     'Frankenstein nació en la novela que Mary Shelley publicó en 1818. ' +
