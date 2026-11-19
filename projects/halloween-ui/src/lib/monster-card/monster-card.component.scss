@@ -1,8 +1,17 @@
 /* Estilos de la tarjeta de monstruo. Los var(--x, valor) usan el color del tema
    si la app lo define; si no, usan el valor por defecto de después de la coma. */
 
+/* El host (la etiqueta <lib-monster-card>) pasa a ser flex para que la tarjeta
+   pueda estirarse hasta la altura de la casilla en la que está */
+:host {
+  display: flex;
+}
+
 /* Caja principal de la tarjeta */
 .tarjeta {
+  flex: 1;                                       /* ocupa todo el hueco del host (ancho y alto) */
+  display: flex;
+  flex-direction: column;                        /* imagen, cuerpo y botón en vertical */
   background: var(--hui-superficie, #1c202a);   /* fondo gris oscuro */
   border: 3px double var(--hui-verde, #7fb069); /* borde doble verde, aspecto de marco de laboratorio */
   border-radius: 14px;                           /* esquinas redondeadas */
@@ -31,8 +40,11 @@
   border-bottom: 3px solid var(--hui-rojo, #8b1a1a); /* línea roja bajo la foto */
 }
 
-/* Zona de texto */
+/* Zona de texto: crece para ocupar el espacio libre y empuja el botón hacia abajo */
 .tarjeta__cuerpo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 14px 16px 18px;
 }
 
@@ -52,9 +64,10 @@
   white-space: pre-line;   /* respeta los saltos de línea (\n) del texto */
 }
 
-/* Botón con el amarillo eléctrico del rayo */
+/* Botón con el amarillo eléctrico del rayo; margin-top:auto lo deja siempre abajo */
 .tarjeta__boton {
   --background: var(--hui-amarillo, #e8d44d);
   --color: #0d0f14;
   font-weight: 700;
+  margin-top: auto;
 }
