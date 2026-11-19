@@ -24,7 +24,6 @@ interface Ficha {
 })
 export class Tab2Page {
   // Lista de fichas. El HTML crea una tarjeta por cada una.
-  // IMPORTANTE: son borradores, reescríbelos con tus palabras antes de entregar.
   fichas: Ficha[] = [
     {
       titulo: 'Origen y procedencia',

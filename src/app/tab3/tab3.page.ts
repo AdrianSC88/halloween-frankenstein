@@ -22,8 +22,7 @@ interface Elemento {
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, MonsterCardComponent],
 })
 export class Tab3Page {
-  // Elementos de la galería. Guarda tus imágenes en src/assets con estos nombres
-  // (o cambia aquí la ruta). Reescribe las frases con tus palabras.
+  // Elementos de la galería.
   galeria: Elemento[] = [
     {
       imagen: 'assets/castillo.jpg',
